@@ -1,8 +1,8 @@
 // JavaScript for form editing role conditions.
-// ...@module moodle-availability_role-form.
+// ...@module moodle-availability_coursecatrole-form.
 M.availability_coursecatrole = M.availability_coursecatrole || {};
 
-// ...@class M.availability_role.form.
+// ...@class M.availability_coursecatrole.form.
 // ...@extends M.core_availability.plugin.
 M.availability_coursecatrole.form = Y.Object(M.core_availability.plugin);
 
@@ -67,6 +67,6 @@ M.availability_coursecatrole.form.fillErrors = function(errors, node) {
 
     // Check grouping item id.
     if (value.id === 'choose') {
-        errors.push('availability_role:error_selectrole');
+        errors.push('availability_coursecatrole:error_selectrole');
     }
 };
