@@ -47,6 +47,7 @@ class frontend extends \core_availability\frontend {
         $roles = explode(',', get_config('availability_coursecatrole', 'coursecatroles'));
         foreach ($roles as $rec) {
             $rec = $DB->get_record('role', array('id' => $rec));
+            if (empty($rec->id))  continue;
             $jsarray[] = (object)array(
                 'id' => $rec->id,
                 'name' => (!empty($rec->name) ? $rec->name : $rec->shortname),
